@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ExampleProject;
+﻿namespace ExampleProject;
 
 public class Calculator
 {
@@ -21,11 +19,6 @@ public class Calculator
 
     public (int Result, int Remainder) Divide(int first, int second)
     {
-        if (second == 0)
-        {
-            throw new DivideByZeroException();
-        }
-
         return (first / second, first % second);
     }
 }

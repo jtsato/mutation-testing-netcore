@@ -29,6 +29,7 @@ public sealed class CalculatorTest
     [Trait("Category", "Core Business Logic")]
     [Theory(DisplayName = "Successful to subtract numbers")]
     [InlineData(5, 5, 0)]
+    [InlineData(2, 1, 1)]
     public void SuccessfulToSubtractNumbers(int first, int second, int expected)
     {
         // Arrange
@@ -42,6 +43,7 @@ public sealed class CalculatorTest
     [Trait("Category", "Core Business Logic")]
     [Theory(DisplayName = "Successful to multiply numbers")]
     [InlineData(1, 1, 1)]
+    [InlineData(2, 3, 6)]
     public void SuccessfulToMultiplyNumbers(int first, int second, int expected)
     {
         // Arrange
@@ -55,6 +57,8 @@ public sealed class CalculatorTest
     [Trait("Category", "Core Business Logic")]
     [Theory(DisplayName = "Successful to divide numbers")]
     [InlineData(1, 1, 1, 0)]
+    [InlineData(4, 2, 2, 0)]
+    [InlineData(5, 2, 2, 1)]
     public void SuccessfulToDivideNumbers(int first, int second, int expected, int remainder)
     {
         // Arrange
